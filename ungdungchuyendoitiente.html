@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Amount:<br>
+    <input type="number" name="amount" id="amount"><br>
+    From Currency:<br>
+    <select name="from_Cerrency" id="from_Cerrency">
+        <option value="euro" id="euro">Euro(EUR)</option>
+        <option value="USA" id="USA">Dollar(USA)</option>
+    </select>
+    <br>
+    VNĐ:<br>
+    <input type="text" name="VNĐ" id="VNĐ">
+</form>
+<script>
+    function calculator(){
+        var inputmoney = document.getElementById("amount").value;
+        var selected =document.getElementById("from_Cerrency").value;
+        var optionselected = document.getElementById("euro").value;
+        var optionselected = document.getElementById("USA").value;
+        if (optionselected == selected){
+            document.getElementById("VNĐ").value = inputmoney*27400;
+        } else
+            document.getElementById("VNĐ").value = inputmoney/0.000043878894251864855;
+    }
+</script>
+<button type="button" onclick="calculator();">Convert</button>
+</body>
+</html>
